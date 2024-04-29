@@ -4,7 +4,26 @@
   margin: 0 auto;
   max-width: 1366px;
   display: flex;
-  gap: 100px;
+  gap: var(--flex-gap);
   flex-direction: column;
-  padding: 50px;
+}
+.main section{
+  width: 100%;
+  padding: 0px 50px;
+}
+.formWrapper{
+  background: #57027157;
+}
+.footerWrapper{
+  margin-top: calc(-1 * var(--flex-gap));
+  background: #fff;
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+  .main section{
+    width: 100%;
+    padding: 0px 25px;
+  }
+
 }

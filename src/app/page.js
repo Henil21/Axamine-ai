@@ -1,14 +1,46 @@
-import Navbar from "./components/Navbar/navbar"
-import Home from "./components/Home/home"
-import styles from "./page.module.css"
+import Navbar from "./components/Navbar/navbar";
+import Home from "./components/Home/home";
+import styles from "./page.module.css";
+import About from "./components/About/about";
+import Benifits from "./components/Benifits/benifits";
+import Team from "./components/Team/team";
+import FormComponent from "./components/Form/form";
+import Footer from "./components/Footer/footer";
 
 const App = () => {
   return (
     <main className={styles.main}>
-      <Navbar />
-      <Home />
+      
+      <section id="/">
+        <Navbar />
+      </section>
+      
+      <section id="home">
+        <Home />
+      </section>
+      
+      <section id="about">
+        <About />
+      </section>
+      
+      <section id="benifits">
+        <Benifits />
+      </section>
+      
+      <section id="team">
+        <Team />
+      </section>
+      
+      <section id="form" className={styles.formWrapper}>
+        <FormComponent />
+      </section>
+      
+      <section id="footer" className={styles.footerWrapper}>
+        <Footer />
+      </section>
+      
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
