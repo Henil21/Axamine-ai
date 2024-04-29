@@ -4,7 +4,7 @@ const FormComponent = () => {
   return (
     <div className={styles.formWrapper}>
         <div className={styles.leftSection}>
-            <h2 className={`${styles.titleText} titleTextWithGradient`}>Let's team up on this!</h2>
+            <h2 className={`${styles.titleText} titleTextWithGradient`}>Let&apos;s team up on this!</h2>
             <p className={`subTitleText`}>Let us help you become even greater at what you do. Fill out the following form and we will get back to you in the next 24 hours.</p>
             <button className={`${styles.btn} buttonWithGradient`}>
           <img src="/arrow.svg" alt="arrowImage" />
