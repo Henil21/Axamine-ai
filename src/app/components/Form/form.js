@@ -12,15 +12,15 @@ const FormComponent = () => {
         </div>
         <div className={styles.rightSection}>
             <div className={styles.inputWrapper}>
-                <label htmlFor="name">What's your name?</label>
+                <label htmlFor="name">What&apos;s your name?</label>
                 <input type="text"  id='name' placeholder='Type your full Name'/>
             </div>
             <div className={styles.inputWrapper}>
-                <label htmlFor="email">What's your email address?</label>
+                <label htmlFor="email">What&apos;s your email address?</label>
                 <input type="email"  id='email' placeholder='example.gmail.com'/>
             </div>
             <div className={styles.inputWrapper}>
-                <label htmlFor="feedback">Anything else you'd like us to know?</label>
+                <label htmlFor="feedback">Anything else you&apos;d like us to know?</label>
                 <input type="text" placeholder='Feel free to write...' id='feedback' />
             </div>
             <button className={`${styles.btn} buttonWithGradient`}>Learn More 
