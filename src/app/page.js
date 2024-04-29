@@ -11,7 +11,7 @@ const App = () => {
   return (
     <main className={styles.main}>
       
-      <section id="/">
+      <section>
         <Navbar />
       </section>
       
@@ -31,7 +31,7 @@ const App = () => {
         <Team />
       </section>
       
-      <section id="form" className={styles.formWrapper}>
+      <section id="contact" className={styles.formWrapper}>
         <FormComponent />
       </section>
       

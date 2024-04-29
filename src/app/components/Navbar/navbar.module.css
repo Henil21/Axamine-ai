@@ -100,6 +100,9 @@ color: #FFFFFF;
     .links.active .link a{
         font-size: 40px;
     }
+    .buttons{
+        margin-left: auto;
+    }
     .mobileMenu{
         z-index: 101;
         display: block;
