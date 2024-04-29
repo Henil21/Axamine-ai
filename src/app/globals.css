@@ -59,7 +59,8 @@ li {
   border: none;
   outline: none;
   text-wrap: nowrap;
-
+  transition: background .3s ease-in;
+  cursor: pointer;
 }
 .buttonWithGradient {
   background: linear-gradient(90deg, #35017d 0%, #a702d8 100%);
@@ -67,14 +68,20 @@ li {
 .buttonWithGradientBorder{
   background: #101010;
 }
-.buttonWithGradientBorder::before{
+.buttonWithGradientBorder::before, .buttonWithGradient::before{
   content: '';
-  width: 108%;
-  height: 108%;
+  width: 105%;
+  height: 110%;
   position: absolute;
   background: linear-gradient(90deg, #35017d 0%, #a702d8 100%);
-  border-radius: 68px;
+  border-radius: 50px;
   z-index: -1;
+}
+.buttonWithGradient:hover{
+  background: #101010;
+}
+.buttonWithGradientBorder:hover{
+  background: linear-gradient(90deg, #35017d 0%, #a702d8 100%);
 }
 
 /* customizing the scrollbar */
