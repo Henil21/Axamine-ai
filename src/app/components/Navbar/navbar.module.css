@@ -94,11 +94,11 @@ color: #FFFFFF;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 80px;
+        gap: 65px;
         opacity: 1;
     }
     .links.active .link a{
-        font-size: 40px;
+        font-size: 30px;
     }
     .buttons{
         margin-left: auto;
