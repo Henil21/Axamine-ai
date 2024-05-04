@@ -20,7 +20,7 @@ const Navbar = () => {
           </a>
         </div>
         <ul className={menuActive ? `${styles.links} ${styles.active}`: styles.links}>
-            <li className={styles.link}><a href="#benifits" onClick={() => setActiveNav("#home")}>Yash</a></li>
+            <li className={styles.link}><a href="#benifits" onClick={() => setActiveNav("#home")}>Solutions</a></li>
             <li className={styles.link}><a href="#team" onClick={() => setActiveNav("#team")}>Chatbox</a></li>
             <li className={styles.link}><a href="#about" onClick={() => setActiveNav("#about")}>About us</a></li>
             <li className={styles.link}><a href="#contact" onClick={() => setActiveNav("#contact")}>Contact us</a></li>
