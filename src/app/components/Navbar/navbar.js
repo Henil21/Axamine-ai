@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
         <div className={styles.logo}>
           <a href="#home" onClick={() => setActiveNav("#home")}>
-            axamin.ai
+            <img src="/axamine_logo.png" alt="logo"/>
           </a>
         </div>
         <ul className={menuActive ? `${styles.links} ${styles.active}`: styles.links}>
