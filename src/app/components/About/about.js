@@ -52,7 +52,7 @@ const About = () => {
         About us
         </h2>
         <p className={`${styles.heroText} subTitleText`}>
-        Axamine  supports Language Models (LLMs) by making information more accessible to the general public. LLMs can explain medical terms, provide health-related advice, and answer medical questions for people looking for credible information. This accessibility increases health literacy in the general community, allowing people to make educated health decisions. Axamine's enhanced diagnostic capabilities for healthcare providers, together with LLMs' support for public health education, form a complete strategy to improving healthcare results and promoting overall wellbeing.        </p>
+        Axamine  supports Language Models (LLMs) by making information more accessible to the general public. LLMs can explain medical terms, provide health-related advice, and answer medical questions for people looking for credible information. This accessibility increases health literacy in the general community, allowing people to make educated health decisions. Axamine&lsquo;s enhanced diagnostic capabilities for healthcare providers, together with LLMs&lsquo; support for public health education, form a complete strategy to improving healthcare results and promoting overall wellbeing.        </p>
         <button className={`${styles.btn} buttonWithGradient`}>Learn More 
           <img src="/arrow.svg" alt="arrowImage" />
         </button>

@@ -36,7 +36,7 @@ const cardDetails = [
   {
     id: 6,
     title: "Decision Support",
-    desc: "AI systems can provide valuable decision support to healthcare professionals by suggesting potential diagnoses based on data analysis. This can complement clinicians' expertise and lead to more informed treatment plans",
+    desc: "AI systems can provide valuable decision support to healthcare professionals by suggesting potential diagnoses based on data analysis. This can complement clinicians expertise and lead to more informed treatment plans",
     number: "04",
   },
 ];
