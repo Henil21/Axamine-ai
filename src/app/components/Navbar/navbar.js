@@ -1,6 +1,7 @@
 "use client"
 import { useEffect, useState } from "react"
 import styles from "./navbar.module.css"
+import Link from "next/link"
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false)
@@ -24,11 +25,15 @@ const Navbar = () => {
             <li className={styles.link}><a href="#team" onClick={() => setActiveNav("#team")}>Chatbox</a></li>
             <li className={styles.link}><a href="#about" onClick={() => setActiveNav("#about")}>About us</a></li>
             <li className={styles.link}><a href="#contact" onClick={() => setActiveNav("#contact")}>Contact us</a></li>
-            <button className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}>Demo Request</button>
+            <Link href={"/report"}>
+              <button className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}>Demo Request</button>
+            </Link>
         </ul>
         <div className={styles.buttons}>
             <button className={`${styles.btn} buttonWithGradientBorder`}>Sign In</button>
-            <button className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}>Demo Request</button>
+            <Link href={"/report"}>
+              <button className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}>Demo Request</button>
+            </Link>
         </div>
         <div className={menuActive ? `${styles.mobileMenu} ${styles.active}` : styles.mobileMenu } onClick={toggleMenu}>
           {

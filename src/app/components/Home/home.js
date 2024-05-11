@@ -2,6 +2,7 @@ import Image from "next/image"
 import styles from "./home.module.css"
 import image1 from "@/../../public/2.png"
 import image2 from "@/../../public/1.png"
+import Link from "next/link"
 
 const Home = () => {
   return (
@@ -12,9 +13,12 @@ const Home = () => {
         </h1>
         <p className={`${styles.heroText} subTitleText`}>
         Axamine, an AI-powered diagnostic system, revolutionizes healthcare by empowering professionals to make precise diagnoses efficiently. Its AI systems process complicated medical data quickly and accurately, decreasing errors and enhancing treatment decisions. Axamine improves diagnostic workflows, saving healthcare workers considerable time and ensuring patients receive timely interventions. This efficiency and precision immediately contribute to better patient care and results, making Axamine an indispensable tool in healthcare settings        </p>
-        <button className={`${styles.btn} buttonWithGradient`}>Demo Request 
-          <img src="/arrow.svg" alt="arrowImage" />
-        </button>
+        <Link href={"/report"}>
+          <button className={`${styles.btn} buttonWithGradient`}>
+            Demo Request 
+            <img src="/arrow.svg" alt="arrowImage" />
+          </button>
+        </Link>
       </div>
       <div className={styles.right}>
       <div className={styles.rightWrapper}>
