@@ -8,24 +8,25 @@ const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#home");
   const toggleMenu = () => setMenuActive(!menuActive)
 
-  useEffect(() => {
-    setMenuActive(false)
-  }, [activeNav])
   
+  const menuClickFunction = (link) => {
+    link && setActiveNav(link) 
+    setMenuActive(false)
+  }
   
   return (
     <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <a href="#home" onClick={() => setActiveNav("#home")}>
+          <a href="/#home" onClick={() => setActiveNav("#home")}>
             <img src="/axamine_logo.png" alt="logo"/>
           </a>
         </div>
         <ul className={menuActive ? `${styles.links} ${styles.active}`: styles.links}>
-            <li className={styles.link}><a href="#benifits" onClick={() => setActiveNav("#home")}>Solutions</a></li>
-            <li className={styles.link}><a href="#team" onClick={() => setActiveNav("#team")}>Chatbox</a></li>
-            <li className={styles.link}><a href="#about" onClick={() => setActiveNav("#about")}>About us</a></li>
-            <li className={styles.link}><a href="#contact" onClick={() => setActiveNav("#contact")}>Contact us</a></li>
-            <Link href={"/report"}>
+            <li className={styles.link}><a href="/#benifits" onClick={() => menuClickFunction("#home")}>Solutions</a></li>
+            <li className={styles.link}><a href="/#team" onClick={() => menuClickFunction("#team")}>Chatbox</a></li>
+            <li className={styles.link}><a href="/#about" onClick={() => menuClickFunction("#about")}>About us</a></li>
+            <li className={styles.link}><a href="/#contact" onClick={() => menuClickFunction("#contact")}>Contact us</a></li>
+            <Link href={"/report"} onClick={() => menuClickFunction()}>
               <button className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}>Demo Request</button>
             </Link>
         </ul>

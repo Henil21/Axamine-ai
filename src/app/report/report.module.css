@@ -7,6 +7,19 @@
   gap: var(--flex-gap);
   flex-direction: column;
   margin-bottom: 50px;
+  position: relative;
+}
+.main::before{
+    content: "";
+position: absolute;
+width: 200px;
+height: 200px;
+left: 5%;
+top: 5%;
+
+background: #B100CD;
+filter: blur(200px);
+
 }
 .main section {
   width: 100%;

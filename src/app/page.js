@@ -29,7 +29,6 @@ const App = () => {
       <section id="contact" className={styles.formWrapper}>
         <FormComponent />
       </section>
-    
     </main>
   );
 };
