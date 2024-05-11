@@ -67,7 +67,7 @@ const Navbar = () => {
         <button className={`${styles.btn} buttonWithGradientBorder`}>
           Sign In
         </button>
-        <Link href={"/report"}>
+        <Link href={"/report"} onClick={() => menuClickFunction("/report")}>
           <button
             className={`${styles.btn} ${styles.demoBtn} buttonWithGradient`}
           >
