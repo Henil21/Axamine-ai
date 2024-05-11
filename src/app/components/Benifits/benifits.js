@@ -31,13 +31,13 @@ const cardDetails = [
     id: 5,
     title: "Early Detection",
     desc: "AI systems can identify subtle signs and patterns that may indicate early stages of diseases or conditions, enabling early intervention and treatment. This can significantly improve prognosis and patient survival rates",
-    number: "04",
+    number: "05",
   },
   {
     id: 6,
     title: "Decision Support",
     desc: "AI systems can provide valuable decision support to healthcare professionals by suggesting potential diagnoses based on data analysis. This can complement clinicians expertise and lead to more informed treatment plans",
-    number: "04",
+    number: "06",
   },
 ];
 
