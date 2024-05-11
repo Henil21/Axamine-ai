@@ -9,17 +9,16 @@
   margin-bottom: 50px;
   position: relative;
 }
-.main::before{
-    content: "";
-position: absolute;
-width: 200px;
-height: 200px;
-left: 5%;
-top: 5%;
+.main::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 5%;
+  top: 5%;
 
-background: #B100CD;
-filter: blur(200px);
-
+  background: #b100cd;
+  filter: blur(200px);
 }
 .main section {
   width: 100%;
@@ -59,11 +58,11 @@ filter: blur(200px);
 .left .upLoadImageSection label {
   text-align: center;
 }
-.right{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    --column-gap: 15px;
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  --column-gap: 15px;
 }
 .right .content {
   display: flex;
@@ -78,36 +77,39 @@ filter: blur(200px);
   color: #ffffff;
 }
 .heading {
-    font-weight: 400;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
   text-transform: capitalize;
   color: #ffffff;
 }
-.para, .content li{
+.para,
+.content li {
   font-size: 16px;
   line-height: 24px;
   color: #686868;
   font-weight: 300;
 }
-.right li{
-    list-style: auto;
+.right li {
+  list-style: auto;
 }
-.right ul li{
-    list-style-type: disc;
+.right ul li {
+  list-style-type: disc;
 }
-.right .content > ol, .right .content > ul, .right .content > p{
-    display: flex;
-    flex-direction: column;
-    gap: var(--column-gap);
-    padding-left: 50px;
+.right .content > ol,
+.right .content > ul,
+.right .content > p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--column-gap);
+  padding-left: 50px;
 }
-.right .listHeading{
-    color: #fff;
+.right .listHeading {
+  color: #fff;
 }
-.buttons{
-    display: flex;
-    gap: 20px;
+.buttons {
+  display: flex;
+  gap: 20px;
 }
 /* media queries */
 @media screen and (max-width: 600px) {
@@ -117,32 +119,35 @@ filter: blur(200px);
   }
 }
 
-@media  screen and (max-width: 768px) {
-    .main section {
-       flex-direction: column;
-       gap: 60px;
-      }
-      .left,
-      .right {
-        flex-basis: 100%;
-      }
+@media screen and (max-width: 768px) {
+  .main section {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .left,
+  .right {
+    flex-basis: 100%;
+  }
 }
-@media  screen and (max-width: 500px) {
-    .right{
-        gap: 20px;
-        --column-gap: 12px;
-    }
-    .right .content > ol, .right .content > ul, .right .content > p{
-        padding-left: 30px;
-    }
-    .para, .content li{
-        font-size: 14px;
-        line-height: 20px;
-      }
-      .left{
-        padding-top: 50px;
-      }
-      .mainHeading {
-        font-size: 22px;
-    }
+@media screen and (max-width: 500px) {
+  .right {
+    gap: 20px;
+    --column-gap: 12px;
+  }
+  .right .content > ol,
+  .right .content > ul,
+  .right .content > p {
+    padding-left: 30px;
+  }
+  .para,
+  .content li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .left {
+    padding-top: 50px;
+  }
+  .mainHeading {
+    font-size: 22px;
+  }
 }

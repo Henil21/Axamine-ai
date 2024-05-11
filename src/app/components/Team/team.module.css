@@ -16,9 +16,13 @@
 .profileCards {
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 20px;
   min-height: 50vh;
   position: relative;
+}
+.profileCard img{
+  object-position: top;
 }
 
 /* testing */
@@ -34,7 +38,7 @@
 }
 
 .profileCard {
-  min-width: 100px;
+  min-width: 225px;
   flex-basis: 25%;
   position: relative;
   background-color: #d9d9d9;
@@ -101,7 +105,7 @@
   }
   .profileCard,
   .profileCard.active {
-    flex-basis: calc(50% - 20px) !important;
+    flex-basis: 40%;
     aspect-ratio: 3/4;
     scale: 1;
     filter: none !important;
@@ -112,6 +116,9 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .profileCard,  .profileCard.active, .profileCard:hover {
+    flex-basis: 90%;
+  }
   .profileCard .content .name {
     font-size: 18px;
     line-height: 18px;

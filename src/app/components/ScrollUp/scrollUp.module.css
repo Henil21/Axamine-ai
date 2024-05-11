@@ -10,7 +10,7 @@
   cursor: pointer;
   padding: 10px 12px;
   transform: translateY(-5);
-  box-shadow: 0px 8px 24px #b186dbb0;
+  box-shadow: 0px 8px 24px #b988eac5;
   z-index: 1000;
   transition: 0.3s;
   animation: float 2s ease-in-out infinite alternate-reverse;

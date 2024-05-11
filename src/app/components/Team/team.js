@@ -1,33 +1,21 @@
 import Image from "next/image";
 import styles from "./team.module.css";
 import profile1 from "@/../../public/profile1.png";
+import profile2 from "@/../../public/profile2.png";
 
 const teamMembers = [
   {
     id: 1,
-    name: 'Jessica Jones',
-    tag: 'founder'
+    name: 'Henilsinh Raj',
+    tag: 'Founder',
+    image: profile1
   },
   {
     id: 2,
-    name: 'Jessica Jones',
-    tag: 'founder'
-  },
-  {
-    id: 3,
-    name: 'Jessica Jones',
-    tag: 'founder'
-  },
-  {
-    id: 4,
-    name: 'Jessica Jones',
-    tag: 'founder'
-  },
-  {
-    id: 5,
-    name: 'Jessica Jones',
-    tag: 'founder'
-  },
+    name: 'Parth bangoria',
+    tag: 'co-founder',
+    image: profile2
+  }
 ]
 
 const Team = () => {
@@ -42,9 +30,10 @@ const Team = () => {
       <div className={styles.profileCards}>
         {
           teamMembers?.map((card, index) => (
-            <div className={`${styles.profileCard} ${styles.card1} ${Math.round(teamMembers.length / 2 - 1) === index ? styles.active : ""}`} key={index}>
+            // <div className={`${styles.profileCard} ${styles.card1} ${Math.round(teamMembers.length / 2 - 1) === index ? styles.active : ""}`} key={index}>
+            <div className={`${styles.profileCard}`} key={index}>
                 <div className={styles.backgroundImage}>
-                    <Image src={profile1} fill sizes="20%" alt="profile" placeholder="blur"/>
+                    <Image src={card.image} fill sizes="20%" alt="profile" placeholder="blur"/>
                 </div>
                 <div className={styles.content}>
                     <p className={styles.tag}>{card.tag}</p>    
