@@ -14,7 +14,7 @@ export const poppins = Poppins({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "axamin.ai",
+  title: "axamine.ai",
   description: "AI integrated Diagnostic",
 };
 
