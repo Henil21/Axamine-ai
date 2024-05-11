@@ -53,14 +53,13 @@
   align-items: flex-start;
   margin-bottom: 20px;
   border-radius: 12px;
-  padding: 5px 15px;
+  padding: 15px;
   display: flex;
-  align-items: center;
   box-shadow: 4px 4px 11px 0px #630883d1;
+  gap: 5px;
 }
 
 .message {
-  padding: 8px 12px;
   border-radius: 16px;
   word-wrap: break-word;
   font-size: 16px;
@@ -136,7 +135,7 @@
   .main section {
     width: 100%;
     padding: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
   .inputField {
     width: 50px;
@@ -145,5 +144,18 @@
   }
   .message {
     font-size: 14px;
+  }
+  .chatBox {
+    max-height: 80%;
+  }
+  .main {
+    min-height: auto;
+  }
+  .messageContainer {
+    padding: 8px;
+}
+.messageIcon {
+    width: 26px;
+    height: 26px;
   }
 }
