@@ -41,6 +41,7 @@
 }
 .link {
   position: relative;
+  text-align: center;
 }
 .link a {
   font-style: normal;
