@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./team.module.css";
 import profile1 from "@/../../public/profile1.png";
 import profile2 from "@/../../public/profile2.png";
+import Link from "next/link";
 
 const teamMembers = [
   {
@@ -31,15 +32,15 @@ const Team = () => {
         {
           teamMembers?.map((card, index) => (
             // <div className={`${styles.profileCard} ${styles.card1} ${Math.round(teamMembers.length / 2 - 1) === index ? styles.active : ""}`} key={index}>
-            <div className={`${styles.profileCard}`} key={index}>
-                <div className={styles.backgroundImage}>
-                    <Image src={card.image} fill sizes="20%" alt="profile" placeholder="blur"/>
-                </div>
-                <div className={styles.content}>
-                    <p className={styles.tag}>{card.tag}</p>    
-                    <p className={styles.name}>{card.name}</p>   
-                </div>
-            </div>
+              <Link href={`https://www.google.com/search?q=${encodeURIComponent(card.name)}`} target="_blank" className={`${styles.profileCard}`} key={index}>
+                  <div className={styles.backgroundImage}>
+                      <Image src={card.image} fill sizes="20%" alt="profile" placeholder="blur"/>
+                  </div>
+                  <div className={styles.content}>
+                      <p className={styles.tag}>{card.tag}</p>    
+                      <p className={styles.name}>{card.name}</p>   
+                  </div>
+              </Link>
           ))
         }
       </div>
