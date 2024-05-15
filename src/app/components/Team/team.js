@@ -32,15 +32,15 @@ const Team = () => {
         {
           teamMembers?.map((card, index) => (
             // <div className={`${styles.profileCard} ${styles.card1} ${Math.round(teamMembers.length / 2 - 1) === index ? styles.active : ""}`} key={index}>
-              <Link href={`https://www.google.com/search?q=${encodeURIComponent(card.name)}`} target="_blank" className={`${styles.profileCard}`} key={index}>
-                  <div className={styles.backgroundImage}>
-                      <Image src={card.image} fill sizes="20%" alt="profile" placeholder="blur"/>
-                  </div>
-                  <div className={styles.content}>
-                      <p className={styles.tag}>{card.tag}</p>    
-                      <p className={styles.name}>{card.name}</p>   
-                  </div>
-              </Link>
+            <div className={`${styles.profileCard}`} key={index}>
+                <div className={styles.backgroundImage}>
+                    <Image src={card.image} fill sizes="20%" alt="profile" placeholder="blur"/>
+                </div>
+                <div className={styles.content}>
+                    <p className={styles.tag}>{card.tag}</p>    
+                    <p className={styles.name}>{card.name}</p>   
+                </div>
+            </div>
           ))
         }
       </div>
