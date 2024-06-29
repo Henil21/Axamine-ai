@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./report.module.css";
+import Head from "next/head";
 
 const Report = () => {
   const [selectedFile, setSelectedFile] = useState(null);
