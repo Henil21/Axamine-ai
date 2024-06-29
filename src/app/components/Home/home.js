@@ -16,7 +16,7 @@ const Home = () => {
         />
         <meta
           name="keywords"
-          content="Axamine, AI, Diagnostic, Healthcare, Technology"
+          content="Axamine, AI, axamine ai, Henilsinh Raj, axamine ,examine  Diagnostic, Healthcare, Technology"
         />
         <link rel="canonical" href="https://www.axamine.in" />
       </Head>
