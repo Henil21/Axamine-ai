@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import UserCard from "../components/chatUserCard/UserCard";
 import styles from "./chatbox.module.css";
 import { useEffect, useRef, useState } from "react";
@@ -57,12 +58,11 @@ const demoUserName = [
   },
 ];
 
-
 const ChatBox = () => {
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([]);
   // const [searchText, setSearchText] = useState("");
-  const [isSideBarOpen, setIsSideBarOpen] = useState(true)
+  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
   //for scrolling to the bottom of the chatbox after every message
   const messageListRef = useRef(null);
 
@@ -104,14 +104,30 @@ const ChatBox = () => {
     }
   };
 
-  const toggleSideBar = () => (setIsSideBarOpen(pre => !pre));
-  
+  const toggleSideBar = () => setIsSideBarOpen((pre) => !pre);
+
   return (
-    <div className={styles.main}>
-      <section id="chatbox" className={isSideBarOpen ? styles.sideBarOpen : styles.sideBarClose}>
-        <aside className={styles.userAsideBar}>
-          {/* commented the search bar, may be get to use in the future... */}
-          {/* <div className={styles.userSearchBar}>
+    <>
+      <Head>
+        <title>Axamine - ChatBox</title>
+        <meta
+          name="description"
+          content="Chat with Axamine's AI-integrated diagnostic system."
+        />
+        <meta
+          name="keywords"
+          content="Axamine, AI, Diagnostic, Chat, Healthcare, Technology"
+        />
+        <link rel="canonical" href="https://www.axamine.in/chatbox" />
+      </Head>
+      <div className={styles.main}>
+        <section
+          id="chatbox"
+          className={isSideBarOpen ? styles.sideBarOpen : styles.sideBarClose}
+        >
+          <aside className={styles.userAsideBar}>
+            {/* commented the search bar, may be get to use in the future... */}
+            {/* <div className={styles.userSearchBar}>
             <img
               src="./searchIcon.png"
               alt="searchIcon"
@@ -125,77 +141,87 @@ const ChatBox = () => {
               onChange={handleSearchFunction}
             />
           </div> */}
-          <div className={styles.sideBarToggleBtn} onClick={toggleSideBar}>
-            <img src="./sideBarCloseBtn.png" alt="sideBarImage" />
-          </div>
-          <div className={styles.users}>
-            {demoUserName.length === 0 ?
-            <p className={styles.noUserMessage}>No user</p>
-            : demoUserName?.map((user, index) => (
-              <UserCard key={index} data={user} />
-            ))}
-          </div>
-        </aside>
-        <div className={styles.chatBox}>
-          <div className={isSideBarOpen ? styles.sideBarToggleBtn : `${styles.sideBarToggleBtn} ${styles.showSideBar}`} onClick={toggleSideBar}>
-            <img src="./sideBarOpenBtn.png" alt="sideBarImage" />
-          </div>
-          <div className={styles.messageList} ref={messageListRef}>
-            {messages.length === 0 ? (
-              <div className={styles.emptyChat}>
-                <img
-                  src="./empty-chat.png"
-                  alt="Empty Chat"
-                  className={styles.emptyChatImage}
-                />
-                <p className={styles.emptyChatText}>No messages yet</p>
-              </div>
-            ) : (
-              messages?.map((message, index) => (
-                <div
-                  key={index}
-                  className={`${styles.messageContainer} ${
-                    message.sender === "user"
-                      ? styles.userMessage
-                      : styles.chatbotMessage
-                  }`}
-                >
+            <div className={styles.sideBarToggleBtn} onClick={toggleSideBar}>
+              <img src="./sideBarCloseBtn.png" alt="sideBarImage" />
+            </div>
+            <div className={styles.users}>
+              {demoUserName.length === 0 ? (
+                <p className={styles.noUserMessage}>No user</p>
+              ) : (
+                demoUserName?.map((user, index) => (
+                  <UserCard key={index} data={user} />
+                ))
+              )}
+            </div>
+          </aside>
+          <div className={styles.chatBox}>
+            <div
+              className={
+                isSideBarOpen
+                  ? styles.sideBarToggleBtn
+                  : `${styles.sideBarToggleBtn} ${styles.showSideBar}`
+              }
+              onClick={toggleSideBar}
+            >
+              <img src="./sideBarOpenBtn.png" alt="sideBarImage" />
+            </div>
+            <div className={styles.messageList} ref={messageListRef}>
+              {messages.length === 0 ? (
+                <div className={styles.emptyChat}>
                   <img
-                    src={
-                      message.sender === "user"
-                        ? "./userIcon.png"
-                        : "./chatbot.png"
-                    }
-                    alt={`${message.sender} Icon`}
-                    className={styles.messageIcon}
+                    src="./empty-chat.png"
+                    alt="Empty Chat"
+                    className={styles.emptyChatImage}
                   />
-                  <div className={styles.message}>
-                    {message.text}
-                    <div className={styles.messageIdicator}></div>
-                  </div>
+                  <p className={styles.emptyChatText}>No messages yet</p>
                 </div>
-              ))
-            )}
+              ) : (
+                messages?.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`${styles.messageContainer} ${
+                      message.sender === "user"
+                        ? styles.userMessage
+                        : styles.chatbotMessage
+                    }`}
+                  >
+                    <img
+                      src={
+                        message.sender === "user"
+                          ? "./userIcon.png"
+                          : "./chatbot.png"
+                      }
+                      alt={`${message.sender} Icon`}
+                      className={styles.messageIcon}
+                    />
+                    <div className={styles.message}>
+                      {message.text}
+                      <div className={styles.messageIdicator}></div>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+            <form onSubmit={handleSubmit} className={styles.inputForm}>
+              <button type="button" className={styles.sendButton}>
+                <img src="./chatBoxFileBtn.png" alt="sendButton" />
+              </button>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+                placeholder="Type your message..."
+                className={styles.inputField}
+                required
+              />
+              <button type="submit" className={styles.sendButton}>
+                <img src="./sendBtn.png" alt="sendButton" />
+              </button>
+            </form>
           </div>
-          <form onSubmit={handleSubmit} className={styles.inputForm}>
-            <button type="button" className={styles.sendButton}>
-              <img src="./chatBoxFileBtn.png" alt="sendButton" />
-            </button>
-            <input
-              type="text"
-              value={inputValue}
-              onChange={handleInputChange}
-              placeholder="Type your message..."
-              className={styles.inputField}
-              required
-            />
-            <button type="submit" className={styles.sendButton}>
-              <img src="./sendBtn.png" alt="sendButton" />
-            </button>
-          </form>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
