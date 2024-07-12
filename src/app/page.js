@@ -10,10 +10,10 @@ const App = () => {
   return (
     <>
       <Head>
-        <title>Axamine - AI Integrated Diagnostic</title>
+        <title>Axamine.ai - Ai Integrated Diagnostic</title>
         <meta
           name="description"
-          content="Axamine is an AI integrated diagnostic platform offering state-of-the-art solutions."
+          content="Axamine is an Ai integrated diagnostic platform offering state-of-the-art solutions."
         />
         <meta
           name="keywords"
