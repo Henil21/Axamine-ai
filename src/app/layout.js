@@ -15,7 +15,7 @@ export const poppins = Poppins({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Axamine - AI Integrated Diagnostic",
+  title: "Axamine.ai - Ai Integrated Diagnostic",
   description:
     "Axamine is an AI integrated diagnostic platform offering state-of-the-art solutions.",
 };
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="keywords"
-          content="Axamine, AI, Diagnostic, Healthcare, Technology"
+          content="Axamine, AI, Diagnostic, Healthcare, Technology,Henilsinh raj,axamine ai , medtech"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.axamine.in" />
