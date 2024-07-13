@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Axamine - AI-integrated Diagnostic</title>
+        <title>Axamine.ai- Ai-integrated Diagnostic</title>
         <meta
           name="description"
           content="Axamine, an AI-powered diagnostic system, revolutionizes healthcare by empowering professionals to make precise diagnoses efficiently."
